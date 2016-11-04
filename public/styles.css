@@ -12,7 +12,7 @@
   box-shadow: 0 1px 1px #ccc;
   border-radius: 2px;
   min-width: 60%;
-  width: 60%;
+  width: 100%;
   padding: 10px;
   margin: 45px auto 25px;
   position:relative;
@@ -60,4 +60,54 @@
   font-weight: bold;
   outline: none;
   text-indent: 40px;
+}
+
+/*
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}*/
+.searchBar{
+  width:40px;
+}
+
+#search_book_input{
+
+  width: 600px;
+}
+
+
+.grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+   margin: auto;
+  align-items: center;
+
+}
+
+.grid img{
+  height: 100%;
+  width:100%;
+}
+.pictureContainer{
+  text-align: center;
+  width:20%;
+  height:20%;
+}
+ .list{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    }
+body{
+  margin: auto;
+  flex-direction: column;
+  width: 60%;
+  display: flex;
 }

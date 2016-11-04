@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <meta name="viewport" content="width=device-width" />
+  <title>ANGULARGRAM</title>
+
+</head>
+
+<body  ng-app="myApp">
+<h1  >{{ "HELLO "+ "MY FELLOW GRAMSTER" }}</h1>
+<div class="container">
+
+  <div ng-controller="myController"> <!-- myController start -->
+  <div class="wholePage">
+    <div class="bar">
+     <input type="text" id="search_caption_input" ng-model="searchCaption" />
+     <a ng-click="setLayout('list')" class="list-icon"></a>
+     <a ng-click ="setLayout('grid')" class="grid-icon" ></a>
+    </div>
+
+    <div class="{{ layout }}">
+      <div class="pictureContainer" ng-repeat="picture in pictures.data |     filter:searchCaption">
+        <img ng-src="{{ picture.images.standard_resolution.url }}"></img>
+        <div class="caption">{{ picture.caption.text }}</div>
+      </div>
+    </div>
+  </div>
+</div><!-- myController END -->
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js">
+</script>
+<script src="/myApp.js"></script>
+<script src="/service.js"></script>
+<script src="/controller.js"></script>
+
+</body>
+</html>
